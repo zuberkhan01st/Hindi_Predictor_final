@@ -66,9 +66,10 @@ def main():
         # Display additional information about the predicted disease
         if predicted_disease in disease_info:
             st.write('अतिरिक्त जानकारी:')
-            st.write(disease_info[predicted_disease])
+            st.write(disease_info.get(predicted_disease, 'अतिरिक्त जानकारी उपलब्ध नहीं है।'))
         else:
             st.write('अतिरिक्त जानकारी उपलब्ध नहीं है।')
+
         
         st.markdown("""
         *अस्वीकृति:* यह बीमारी की भविष्यवाणी के लिए एक मशीन शिक्षा आधारित मॉडल है। यह अनुमान प्रदान कर सकता है, लेकिन हमेशा सटीक नहीं होता है। सटीक चिकित्सा सलाह के लिए, कृपया किसी योग्य स्वास्थ्य पेशेवर से संपर्क करें।
